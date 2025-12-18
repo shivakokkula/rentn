@@ -1,12 +1,9 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import { 
-  MapPin, CreditCard, Search, Star, 
-  ShieldCheck, Fuel, X, Check,
-  MessageCircle, Phone, Image as ImageIcon,
-  Smartphone, Send, Menu, Filter, ChevronDown,
-  Upload, User, FileText, Info, Loader2, Clock, 
-  History, LogOut, Shield, Calendar, Map as MapIcon,
-  Navigation, CheckCircle2, AlertCircle
+  MapPin, Search, 
+  ShieldCheck, X, Check, Loader2, Clock, 
+  History, LogOut, Shield, Calendar,
+  Navigation, AlertCircle
 } from 'lucide-react';
 
 /**
@@ -493,11 +490,11 @@ const VehicleDetails = ({ selectedVehicle, setView, kycData, setKycData, handleF
               <div className="grid grid-cols-2 gap-3">
                 <label className="aspect-[3/2] border-2 border-dashed border-gray-700 bg-[#0F2027] rounded-2xl flex flex-col items-center justify-center cursor-pointer overflow-hidden transition-colors hover:border-[#1FA2FF]/50">
                    <input type="file" className="hidden" onChange={(e) => handleFileUpload('licenseFront', e.target.files[0])} />
-                   {kycData.licenseFront ? <img src={kycData.licenseFront} className="w-full h-full object-cover" /> : <span className="text-[10px] text-gray-500 font-bold">DL FRONT</span>}
+                   {kycData.licenseFront ? <img  alt="DL Back" src={kycData.licenseFront} className="w-full h-full object-cover" /> : <span className="text-[10px] text-gray-500 font-bold">DL FRONT</span>}
                 </label>
                 <label className="aspect-[3/2] border-2 border-dashed border-gray-700 bg-[#0F2027] rounded-2xl flex flex-col items-center justify-center cursor-pointer overflow-hidden transition-colors hover:border-[#1FA2FF]/50">
                    <input type="file" className="hidden" onChange={(e) => handleFileUpload('licenseBack', e.target.files[0])} />
-                   {kycData.licenseBack ? <img src={kycData.licenseBack} className="w-full h-full object-cover" /> : <span className="text-[10px] text-gray-500 font-bold">DL BACK</span>}
+                   {kycData.licenseBack ? <img  alt="DL Back" src={kycData.licenseBack} className="w-full h-full object-cover" /> : <span className="text-[10px] text-gray-500 font-bold">DL BACK</span>}
                 </label>
                 <label className="col-span-2 h-16 border-2 border-dashed border-gray-700 bg-[#0F2027] rounded-2xl flex items-center justify-center gap-3 cursor-pointer transition-colors hover:border-[#1FA2FF]/50">
                    <input type="file" className="hidden" onChange={(e) => handleFileUpload('aadharFront', e.target.files[0])} />
